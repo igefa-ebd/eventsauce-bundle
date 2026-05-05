@@ -14,6 +14,8 @@ down: ## Stop the Docker environment
 console: ## Open a shell in the PHP container
 	$(DOCKER_COMPOSE) exec php sh
 
+# Below needs access to PHP and composer, so run in the container.
+
 help:
 	@awk -F ':|##' '/^[^\t].+?:.*?##/ {\
 		printf "\033[36m%-20s\033[0m %s\n", $$1, $$NF \

@@ -43,7 +43,7 @@ return [
 ];
 ```
 
-For local Docker-based verification, run `make up` on the host and then run `make install phpstan test` inside the PHP container. At the moment, some legacy development packages may need to be removed from `composer.json` before that workflow works end to end, because packages such as `andreo/eventsauce-aggregate` and `andreo/eventsauce-upcasting` are no longer available for Composer to install. Those have been removed in this copy of the library.
+For local Docker-based verification, run `make up` on the host and then run `make install phpstan test` inside the PHP container. At the moment, some legacy development packages may need to be removed from `composer.json` before that workflow works end to end, because packages such as `andreo/eventsauce-aggregate`, `andreo/eventsauce-outbox`, and `andreo/eventsauce-upcasting` are no longer available for Composer to install.  Those have been removed in this copy of the library.
 
 ### Introduction
 
