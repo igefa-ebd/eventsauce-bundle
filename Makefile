@@ -1,5 +1,19 @@
 .DEFAULT_GOAL=help
 
+DOCKER_UID := $(shell id -u)
+DOCKER_GID := $(shell id -g)
+DOCKER_COMPOSE = UID=$(DOCKER_UID) GID=$(DOCKER_GID) docker compose -f .docker/docker-compose.yml
+
+# Host targets. Run these on the host, not in the container.
+up: ## Start the Docker environment
+	$(DOCKER_COMPOSE) up --build -d
+
+down: ## Stop the Docker environment
+	$(DOCKER_COMPOSE) down --remove-orphans
+
+console: ## Open a shell in the PHP container
+	$(DOCKER_COMPOSE) exec php sh
+
 help:
 	@awk -F ':|##' '/^[^\t].+?:.*?##/ {\
 		printf "\033[36m%-20s\033[0m %s\n", $$1, $$NF \

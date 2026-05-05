@@ -1,0 +1,11 @@
+services:
+  php:
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
+    user: "${UID:-1000}:${GID:-1000}"
+    working_dir: /app
+    command: ["sleep", "infinity"]
+    volumes:
+      - ..:/app
+    tty: true

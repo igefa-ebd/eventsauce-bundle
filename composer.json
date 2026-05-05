@@ -15,6 +15,24 @@
             "email": "andrze.pakula@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/igefa-ebd/eventsauce-bundle.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/igefa-ebd/eventsauce-messenger.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/igefa-ebd/eventsauce-migration-generator.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/igefa-ebd/eventsauce-snapshotting.git"
+        }
+    ],
     "suggest": {
         "andreo/eventsauce-snapshotting": "Extended snapshot components.",
         "andreo/eventsauce-aggregate": "Extended aggregate components of the EventSauce.",
@@ -27,19 +45,16 @@
         "php": ">=8.2",
         "eventsauce/eventsauce": "^3.0",
         "eventsauce/message-repository-for-doctrine": "^0.4.1",
-        "symfony/http-kernel": "^6.2",
-        "symfony/config": "^6.2",
-        "symfony/dependency-injection": "^6.2"
+        "symfony/http-kernel": "^6.2|^7.0",
+        "symfony/config": "^6.2|^7.0",
+        "symfony/dependency-injection": "^6.2|^7.0"
     },
     "require-dev": {
-        "andreo/eventsauce-aggregate": "dev-main",
         "andreo/eventsauce-messenger": "dev-main",
         "andreo/eventsauce-migration-generator": "dev-main",
-        "andreo/eventsauce-outbox": "dev-main",
-        "andreo/eventsauce-snapshotting": "dev-main as 3.2",
-        "andreo/eventsauce-upcasting": "dev-main",
+        "andreo/eventsauce-snapshotting": "dev-main",
         "doctrine/doctrine-migrations-bundle": "^3.0",
-        "matthiasnoback/symfony-dependency-injection-test": "^4.3",
+        "matthiasnoback/symfony-dependency-injection-test": "^5.1",
         "phpstan/phpstan": "^1.9",
         "phpunit/phpunit": "^9.4",
         "roave/security-advisories": "dev-latest",
