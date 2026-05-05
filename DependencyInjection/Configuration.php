@@ -93,8 +93,7 @@ final readonly class Configuration implements ConfigurationInterface
     {
         $node = new ArrayNodeDefinition('acl');
         $node
-            ->canBeEnabled()
-            ->end();
+            ->canBeEnabled();
 
         return $node;
     }
@@ -223,8 +222,7 @@ final readonly class Configuration implements ConfigurationInterface
     {
         $node = new ArrayNodeDefinition('message_decorator');
         $node
-            ->canBeDisabled()
-            ->end();
+            ->canBeDisabled();
 
         return $node;
     }
